@@ -1,6 +1,6 @@
 /*
-Stephen Chew (ssc6ae)
-pre-lab 10, 11:00am
+Stephen Chew
+Last Edited: 12-25-2019
 */
 
 #include "huffmanNode.h"
@@ -33,6 +33,3 @@ bool huffmanNode::operator<(const huffmanNode &x)const{
 bool huffmanNode::operator>(const huffmanNode &x)const{
 	return(this->getFrequency() > x.getFrequency());
 }
-// char huffmanNode::getIdk() const{
-// 	return idk;
-// }

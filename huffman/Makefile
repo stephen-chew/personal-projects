@@ -1,6 +1,5 @@
-# Stephen Chew (ssc6ae)
-# post-lab 10: Tuesday, 11am
-
+# Stephen Chew
+# Last Edited: 12-25-2019
 
 CXX=clang++
 
@@ -26,3 +25,5 @@ binary_heap.o: binary_heap.cpp binary_heap.h
 huffmandec.o: huffmandec.cpp
 	$(CXX) -c huffmandec.cpp
 
+clean:
+	-rm -f *.o *~ a.out *encoder *decoder

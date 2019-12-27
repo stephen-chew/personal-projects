@@ -1,6 +1,6 @@
 /*
-Stephen Chew (ssc6ae)
-pre-lab 10, 11:00am
+Stephen Chew
+Last Edited: 12-25-2019
 */
 
 #ifndef BINARY_HEAP_H
@@ -15,7 +15,6 @@ using namespace std;
 class binary_heap {
 public:
     binary_heap();
-    //binary_heap(vector<int> vec);
     ~binary_heap();
 
     void insert(huffmanNode *x);

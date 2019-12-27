@@ -1,6 +1,6 @@
 /*
-Stephen Chew (ssc6ae)
-pre-lab 10, 11:00am
+Stephen Chew
+Last Edited: 12-25-2019
 */
 
 #include "binary_heap.h"
@@ -19,11 +19,8 @@ public:
 	char value;
 	int getFrequency() const;
 	char getValue();
-
-	// UHH DOES THIS WORK????? used in percolate of binary_heap
 	bool operator<(const huffmanNode &x)const;
 	bool operator>(const huffmanNode &x)const;
 
-	// char getIdk() const;
 };
 #endif

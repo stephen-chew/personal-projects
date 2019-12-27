@@ -1,6 +1,6 @@
 /*
-Stephen Chew (ssc6ae)
-pre-lab 10, 11:00am
+Stephen Chew
+Last Edited: 12-25-2019
 */
 
 #include <iostream>
@@ -12,19 +12,13 @@ binary_heap::binary_heap() : heap_size(0) {
     heap.push_back(0);
 }
 
-// builds a heap from an unsorted vector
-// binary_heap::binary_heap(vector<int> vec) : heap_size(vec.size()) {
-//     heap = vec;
-//     heap.push_back(heap[0]);
-//     heap[0] = 0;
-//     for ( int i = heap_size/2; i > 0; i-- )
-//         percolateDown(i);
-// }
-
-// the destructor doesn't need to do much
+// destructor
 binary_heap::~binary_heap() {
 }
 
+/** @brief This function inserts a huffman node into the min heap
+@param x is the huffmanNode that is being inserted
+*/
 void binary_heap::insert(huffmanNode *x) {
     // a vector push_back will resize as necessary
     heap.push_back(x);
@@ -32,6 +26,9 @@ void binary_heap::insert(huffmanNode *x) {
     percolateUp(++heap_size);
 }
 
+/** @brief This function rebalances the tree
+@param hole is the location of the hole
+*/
 void binary_heap::percolateUp(int hole) {
     // get the value just inserted
     huffmanNode *x = heap[hole];					// create new huffmanNode
@@ -43,6 +40,9 @@ void binary_heap::percolateUp(int hole) {
     heap[hole] = x;
 }
 
+/** @brief This function deletes the root node
+@return returns a pointer to a huffmanNode
+*/
 huffmanNode* binary_heap::deleteMin() { // return type should be pointer to huffmannode
     // make sure the heap is not empty
     if ( heap_size == 0 )
@@ -59,6 +59,9 @@ huffmanNode* binary_heap::deleteMin() { // return type should be pointer to huff
     return ret;
 }
 
+/** @brief This function rebalances the tree
+@param hole is the location of the hole
+*/
 void binary_heap::percolateDown(int hole) {
     // get the value to percolate down
     huffmanNode *x = heap[hole];
@@ -79,6 +82,9 @@ void binary_heap::percolateDown(int hole) {
     heap[hole] = x;
 }
 
+/** @brief This function finds the min value of the min heap
+@return returns a pointer to a huffmanNode
+*/
 huffmanNode* binary_heap::findMin() {
     if ( heap_size == 0 )
         throw "findMin() called on empty heap";
@@ -109,3 +115,5 @@ void binary_heap::print() {
     }
     cout << endl;
 }
+
+
