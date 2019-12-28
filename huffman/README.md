@@ -22,12 +22,13 @@ The advantage of converting from a character into binary is to reduce the quanti
 
 ### Decoding Process
 
-
+- The decoding phase first starts by reading in each character and its respective prefix code. A 1 represents a traversal to the right, and a 0 represents a traversal to the left. 
+- A Huffman tree is created using the character-prefix information. 
+- The message is decoded and printed using the created Huffman Tree. 
 
 ---
 
 ### Contributors
 
 - Stephen S Chew <ssc6ae@virginia.edu>
-
-The encoding phase works by reading in a text file, creating a unique prefix code for each character based off of the frequency of the character, and converting the text file from strings to bits. This will reduce the total quantity of memory necessary to represent the text file. The decoding phase works by creating a huffman tree using the characters and their respective prefix codes. The program will then read in prefix codes to 
+- This project was expanded off of information presented in the Program and Data Representation course at the University of Virginia. 
