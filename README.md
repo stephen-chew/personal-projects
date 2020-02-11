@@ -11,7 +11,13 @@ The advantage of converting the characters in a text file into binary is to redu
 
 ---
 
+### UFO Game
+The UFO Game is a word game. Users are presented with a blank codeword, and their objective is to guess all the letters in the codeword. If the user enters in 6 incorrect guesses, the game ends and user loses. If the user is able to correctly guess every letter in the code word, the game ends and the user wins.
+
+---
+
 ### Contributors
 
 - Stephen S Chew <ssc6ae@virginia.edu>
 - The Huffman Code project was expanded off of information presented in the Program and Data Representation course at the University of Virginia.
+- The UFO game was completed as part of the 2020 Codecademy Code Challenge (Backend Software Engineer).
